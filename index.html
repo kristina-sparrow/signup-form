@@ -45,10 +45,13 @@
           </p>
           <div class="form-container bg-light p-3">
             <h2 class="pt-3">Signup</h2>
-            <form>
+            <form
+              oninput='pw2.setCustomValidity(pw2.value != pw.value ? "Passwords do not match." : "")'
+            >
               <div class="row g-2 pt-3">
                 <div class="col form-floating">
                   <input
+                    required
                     type="text"
                     id="first-name"
                     class="form-control"
@@ -58,6 +61,7 @@
                 </div>
                 <div class="col form-floating">
                   <input
+                    required
                     type="text"
                     id="last-name"
                     class="form-control"
@@ -69,7 +73,8 @@
               <div class="row g-2 pt-3">
                 <div class="col form-floating">
                   <input
-                    type="text"
+                    required
+                    type="email"
                     id="email"
                     class="form-control"
                     placeholder=" "
@@ -78,6 +83,7 @@
                 </div>
                 <div class="col form-floating">
                   <input
+                    required
                     type="text"
                     id="username"
                     class="form-control"
@@ -91,9 +97,11 @@
               <div class="row g-2 pt-3">
                 <div class="col form-floating">
                   <input
+                    required
                     type="password"
                     id="password"
                     class="form-control"
+                    name="pw"
                     placeholder=" "
                   />
                   <label for="password" class="form-label"
@@ -102,9 +110,11 @@
                 </div>
                 <div class="col form-floating">
                   <input
+                    required
                     type="password"
                     id="password-confirm"
                     class="form-control"
+                    name="pw2"
                     placeholder=" "
                   />
                   <label for="first-confirm" class="form-label"
