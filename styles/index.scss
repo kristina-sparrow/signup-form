@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+}
+
+.modal {
+  height: 50vh;
+  width: 70vw;
+}
+
+.modal__left {
+  background-image: url(../assets/pexels-polina-zimmerman-3747489.jpg);
+  background-size: cover;
+  .logo__img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
