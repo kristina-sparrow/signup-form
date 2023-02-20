@@ -1,5 +1,15 @@
+/* VARIABLES & FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Inline&family=Bungee+Shade&family=Kanit:wght@400;500;600;700&display=swap");
+$clr-light: rgb(243, 243, 243);
+$clr-grayL: rgb(227, 226, 226);
+$clr-grayD: rgb(141, 143, 145);
+$clr-grayT: rgba(227, 226, 226, 0.4);
+$clr-dark: rgb(44, 43, 43);
+$clr-primary: rgb(1, 77, 241);
+$clr-bg: rgba(243, 243, 243, 0.35);
 
+/* BASE */
 *,
 *::before,
 *::after {
@@ -11,18 +21,154 @@
 html {
   scroll-behavior: smooth;
   font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: $clr-dark;
 }
 
+body {
+  height: 100vh;
+  width: auto;
+  background-image: url(../assets/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MODAL */
 .modal {
-  height: 50vh;
-  width: 70vw;
+  width: clamp(500px, 70%, 1000px);
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  background-color: $clr-bg;
+  border: 1px solid $clr-grayT;
+  border-radius: 15px;
+  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
 }
 
 .modal__left {
-  background-image: url(../assets/pexels-polina-zimmerman-3747489.jpg);
-  background-size: cover;
-  .logo__img {
-    max-width: 100px;
-    max-height: 100px;
+  height: 100%;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .logo__img {
+      max-width: 200px;
+      max-height: 200px;
+    }
+  }
+}
+
+.modal__right {
+  height: 100%;
+  width: 75%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 15px;
+  .text {
+    font-size: 0.9rem;
+    padding: 10px 0px;
+  }
+  .form-container {
+    height: 60%;
+    width: 100%;
+    background-color: $clr-grayT;
+    border-radius: 10px;
+    padding: 15px 20px;
+    box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 12px;
+      .form__title {
+        margin: 10px 0px;
+      }
+      .form__row {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        .form__input-group {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .form__input {
+            width: 100%;
+            padding: 12px 5px;
+            font-size: 1.1rem;
+            color: $clr-dark;
+            background-color: $clr-light;
+            border: none;
+            border-radius: 4px;
+          }
+          .form__label {
+            display: none;
+          }
+        }
+      }
+      .submit-row {
+        justify-content: flex-start;
+        .btn-submit {
+          background-color: $clr-primary;
+          color: $clr-light;
+          margin: 10px 0px;
+          border: none;
+          border-radius: 8px;
+          padding: 10px 12px;
+          font-size: 1rem;
+          box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+            0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+            0 8px 8px hsl(0deg 0% 0% / 0.075),
+            0 16px 16px hsl(0deg 0% 0% / 0.075);
+          &:hover {
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+  }
+  .login {
+    font-size: 0.9rem;
+    a {
+      color: $clr-primary;
+    }
+  }
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: $clr-light;
+  font-size: 0.9rem;
+  i {
+    font-size: 0.9rem;
+    color: $clr-light;
   }
 }

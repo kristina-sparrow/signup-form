@@ -1,4 +1,7 @@
+/* VARIABLES & FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Inline&family=Bungee+Shade&family=Kanit:wght@400;500;600;700&display=swap");
+/* BASE */
 *,
 *::before,
 *::after {
@@ -10,18 +13,147 @@
 html {
   scroll-behavior: smooth;
   font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgb(44, 43, 43);
 }
 
+body {
+  height: 100vh;
+  width: auto;
+  background-image: url(../assets/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MODAL */
 .modal {
-  height: 50vh;
-  width: 70vw;
+  width: clamp(500px, 70%, 1000px);
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  background-color: rgba(243, 243, 243, 0.35);
+  border: 1px solid rgba(227, 226, 226, 0.4);
+  border-radius: 15px;
+  box-shadow: 0 1px 1px hsla(0deg, 0%, 0%, 0.075), 0 2px 2px hsla(0deg, 0%, 0%, 0.075), 0 4px 4px hsla(0deg, 0%, 0%, 0.075), 0 8px 8px hsla(0deg, 0%, 0%, 0.075), 0 16px 16px hsla(0deg, 0%, 0%, 0.075);
 }
 
 .modal__left {
-  background-image: url(../assets/pexels-polina-zimmerman-3747489.jpg);
-  background-size: cover;
+  height: 100%;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.modal__left .logo__img {
-  max-width: 100px;
-  max-height: 100px;
+.modal__left .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.modal__left .logo .logo__img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.modal__right {
+  height: 100%;
+  width: 75%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 15px;
+}
+.modal__right .text {
+  font-size: 0.9rem;
+  padding: 10px 0px;
+}
+.modal__right .form-container {
+  height: 60%;
+  width: 100%;
+  background-color: rgba(227, 226, 226, 0.4);
+  border-radius: 10px;
+  padding: 15px 20px;
+  box-shadow: 0 1px 1px hsla(0deg, 0%, 0%, 0.075), 0 2px 2px hsla(0deg, 0%, 0%, 0.075), 0 4px 4px hsla(0deg, 0%, 0%, 0.075), 0 8px 8px hsla(0deg, 0%, 0%, 0.075), 0 16px 16px hsla(0deg, 0%, 0%, 0.075);
+}
+.modal__right .form-container .form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+}
+.modal__right .form-container .form .form__title {
+  margin: 10px 0px;
+}
+.modal__right .form-container .form .form__row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.modal__right .form-container .form .form__row .form__input-group {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal__right .form-container .form .form__row .form__input-group .form__input {
+  width: 100%;
+  padding: 12px 5px;
+  font-size: 1.1rem;
+  color: rgb(44, 43, 43);
+  background-color: rgb(243, 243, 243);
+  border: none;
+  border-radius: 4px;
+}
+.modal__right .form-container .form .form__row .form__input-group .form__label {
+  display: none;
+}
+.modal__right .form-container .form .submit-row {
+  justify-content: flex-start;
+}
+.modal__right .form-container .form .submit-row .btn-submit {
+  background-color: rgb(1, 77, 241);
+  color: rgb(243, 243, 243);
+  margin: 10px 0px;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  box-shadow: 0 1px 1px hsla(0deg, 0%, 0%, 0.075), 0 2px 2px hsla(0deg, 0%, 0%, 0.075), 0 4px 4px hsla(0deg, 0%, 0%, 0.075), 0 8px 8px hsla(0deg, 0%, 0%, 0.075), 0 16px 16px hsla(0deg, 0%, 0%, 0.075);
+}
+.modal__right .form-container .form .submit-row .btn-submit:hover {
+  transform: translateY(-2px);
+}
+.modal__right .login {
+  font-size: 0.9rem;
+}
+.modal__right .login a {
+  color: rgb(1, 77, 241);
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: rgb(243, 243, 243);
+  font-size: 0.9rem;
+}
+.footer i {
+  font-size: 0.9rem;
+  color: rgb(243, 243, 243);
 }/*# sourceMappingURL=index.css.map */
