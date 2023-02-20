@@ -21,7 +21,7 @@ $clr-bg: rgba(243, 243, 243, 0.35);
 html {
   scroll-behavior: smooth;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 1.6;
   color: $clr-dark;
@@ -67,8 +67,8 @@ body {
     align-items: center;
     justify-content: center;
     .logo__img {
-      max-width: 200px;
-      max-height: 200px;
+      max-width: 175px;
+      max-height: 175px;
     }
   }
 }
@@ -87,7 +87,7 @@ body {
   .header {
     color: $clr-light;
     font-weight: 400;
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 1.2;
     position: relative;
     z-index: 3;
@@ -95,9 +95,9 @@ body {
   .accent-bar {
     position: absolute;
     top: 28px;
-    left: -30px;
-    height: 60px;
-    width: 55%;
+    left: -20px;
+    height: 45px;
+    width: 40%;
     transform: rotate(-2deg);
     background-color: $clr-primary;
     z-index: 2;
@@ -120,7 +120,6 @@ body {
       justify-content: center;
       gap: 12px;
       .form__title {
-        margin: 10px 0px;
         font-weight: 300;
       }
       .form__row {
@@ -137,7 +136,7 @@ body {
           .form__input {
             width: 100%;
             padding: 12px 10px;
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: $clr-dark;
             background-color: $clr-light;
             border: none;

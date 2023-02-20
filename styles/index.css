@@ -13,7 +13,7 @@
 html {
   scroll-behavior: smooth;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 1.6;
   color: rgb(44, 43, 43);
@@ -59,8 +59,8 @@ body {
   justify-content: center;
 }
 .modal__left .logo .logo__img {
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 175px;
+  max-height: 175px;
 }
 
 .modal__right {
@@ -78,7 +78,7 @@ body {
 .modal__right .header {
   color: rgb(243, 243, 243);
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 1.2;
   position: relative;
   z-index: 3;
@@ -86,9 +86,9 @@ body {
 .modal__right .accent-bar {
   position: absolute;
   top: 28px;
-  left: -30px;
-  height: 60px;
-  width: 55%;
+  left: -20px;
+  height: 45px;
+  width: 40%;
   transform: rotate(-2deg);
   background-color: rgb(1, 77, 241);
   z-index: 2;
@@ -111,7 +111,6 @@ body {
   gap: 12px;
 }
 .modal__right .form-container .form .form__title {
-  margin: 10px 0px;
   font-weight: 300;
 }
 .modal__right .form-container .form .form__row {
@@ -130,7 +129,7 @@ body {
 .modal__right .form-container .form .form__row .form__input-group .form__input {
   width: 100%;
   padding: 12px 10px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: rgb(44, 43, 43);
   background-color: rgb(243, 243, 243);
   border: none;
