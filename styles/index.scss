@@ -23,6 +23,7 @@ html {
   font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
+  line-height: 1.6;
   color: $clr-dark;
 }
 
@@ -41,7 +42,7 @@ body {
 
 /* MODAL */
 .modal {
-  width: clamp(500px, 70%, 1000px);
+  width: clamp(500px, 80%, 1000px);
   height: auto;
   display: flex;
   align-items: center;
@@ -49,7 +50,6 @@ body {
   padding: 5px;
   background-color: $clr-bg;
   border: 1px solid $clr-grayT;
-  border-radius: 15px;
   box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
     0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
     0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
@@ -82,15 +82,33 @@ body {
   align-items: flex-start;
   justify-content: space-around;
   gap: 15px;
+  position: relative;
+  z-index: 1;
+  .header {
+    color: $clr-light;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    position: relative;
+    z-index: 3;
+  }
+  .accent-bar {
+    position: absolute;
+    top: 28px;
+    left: -30px;
+    height: 60px;
+    width: 55%;
+    transform: rotate(-2deg);
+    background-color: $clr-primary;
+    z-index: 2;
+  }
   .text {
     font-size: 0.9rem;
-    padding: 10px 0px;
   }
   .form-container {
-    height: 60%;
+    height: 65%;
     width: 100%;
     background-color: $clr-grayT;
-    border-radius: 10px;
     padding: 15px 20px;
     box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
       0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
@@ -103,6 +121,7 @@ body {
       gap: 12px;
       .form__title {
         margin: 10px 0px;
+        font-weight: 300;
       }
       .form__row {
         width: 100%;
@@ -117,12 +136,11 @@ body {
           justify-content: center;
           .form__input {
             width: 100%;
-            padding: 12px 5px;
-            font-size: 1.1rem;
+            padding: 12px 10px;
+            font-size: 1rem;
             color: $clr-dark;
             background-color: $clr-light;
             border: none;
-            border-radius: 4px;
           }
           .form__label {
             display: none;
@@ -136,7 +154,6 @@ body {
           color: $clr-light;
           margin: 10px 0px;
           border: none;
-          border-radius: 8px;
           padding: 10px 12px;
           font-size: 1rem;
           box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),

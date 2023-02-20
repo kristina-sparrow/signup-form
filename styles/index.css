@@ -15,6 +15,7 @@ html {
   font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
+  line-height: 1.6;
   color: rgb(44, 43, 43);
 }
 
@@ -33,7 +34,7 @@ body {
 
 /* MODAL */
 .modal {
-  width: clamp(500px, 70%, 1000px);
+  width: clamp(500px, 80%, 1000px);
   height: auto;
   display: flex;
   align-items: center;
@@ -41,7 +42,6 @@ body {
   padding: 5px;
   background-color: rgba(243, 243, 243, 0.35);
   border: 1px solid rgba(227, 226, 226, 0.4);
-  border-radius: 15px;
   box-shadow: 0 1px 1px hsla(0deg, 0%, 0%, 0.075), 0 2px 2px hsla(0deg, 0%, 0%, 0.075), 0 4px 4px hsla(0deg, 0%, 0%, 0.075), 0 8px 8px hsla(0deg, 0%, 0%, 0.075), 0 16px 16px hsla(0deg, 0%, 0%, 0.075);
 }
 
@@ -72,16 +72,34 @@ body {
   align-items: flex-start;
   justify-content: space-around;
   gap: 15px;
+  position: relative;
+  z-index: 1;
+}
+.modal__right .header {
+  color: rgb(243, 243, 243);
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  position: relative;
+  z-index: 3;
+}
+.modal__right .accent-bar {
+  position: absolute;
+  top: 28px;
+  left: -30px;
+  height: 60px;
+  width: 55%;
+  transform: rotate(-2deg);
+  background-color: rgb(1, 77, 241);
+  z-index: 2;
 }
 .modal__right .text {
   font-size: 0.9rem;
-  padding: 10px 0px;
 }
 .modal__right .form-container {
-  height: 60%;
+  height: 65%;
   width: 100%;
   background-color: rgba(227, 226, 226, 0.4);
-  border-radius: 10px;
   padding: 15px 20px;
   box-shadow: 0 1px 1px hsla(0deg, 0%, 0%, 0.075), 0 2px 2px hsla(0deg, 0%, 0%, 0.075), 0 4px 4px hsla(0deg, 0%, 0%, 0.075), 0 8px 8px hsla(0deg, 0%, 0%, 0.075), 0 16px 16px hsla(0deg, 0%, 0%, 0.075);
 }
@@ -94,6 +112,7 @@ body {
 }
 .modal__right .form-container .form .form__title {
   margin: 10px 0px;
+  font-weight: 300;
 }
 .modal__right .form-container .form .form__row {
   width: 100%;
@@ -110,12 +129,11 @@ body {
 }
 .modal__right .form-container .form .form__row .form__input-group .form__input {
   width: 100%;
-  padding: 12px 5px;
-  font-size: 1.1rem;
+  padding: 12px 10px;
+  font-size: 1rem;
   color: rgb(44, 43, 43);
   background-color: rgb(243, 243, 243);
   border: none;
-  border-radius: 4px;
 }
 .modal__right .form-container .form .form__row .form__input-group .form__label {
   display: none;
@@ -128,7 +146,6 @@ body {
   color: rgb(243, 243, 243);
   margin: 10px 0px;
   border: none;
-  border-radius: 8px;
   padding: 10px 12px;
   font-size: 1rem;
   box-shadow: 0 1px 1px hsla(0deg, 0%, 0%, 0.075), 0 2px 2px hsla(0deg, 0%, 0%, 0.075), 0 4px 4px hsla(0deg, 0%, 0%, 0.075), 0 8px 8px hsla(0deg, 0%, 0%, 0.075), 0 16px 16px hsla(0deg, 0%, 0%, 0.075);
